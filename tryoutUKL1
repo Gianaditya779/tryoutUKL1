@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class TryoutUKL1 {
+    public static void main(String[] args) {
+        Scanner masukan = new Scanner (System.in);
+        double panjang, lebar, tinggi, berat, volume, total, jarak;
+        System.out.println("Masukan panjang paket =");
+        panjang = masukan.nextDouble();
+        System.out.println("Masukan lebar =");
+        lebar = masukan.nextDouble();
+        System.out.println("Masukan tinggi = ");
+        tinggi = masukan.nextDouble();
+        System.out.println("Masukan berat paket = ");
+        berat = masukan. nextDouble();
+        System.out.println("Masukan jarak = ");
+        jarak = masukan.nextDouble();
+        
+        volume = panjang * lebar * tinggi;
+        double hargaKg, tambahan;
+        if (jarak <= 10){
+            hargaKg = 4250;
+        }else {
+        hargaKg = 6000;
+        }
+        total = berat * hargaKg;
+         
+        tambahan = 0;
+        if (volume > 100){
+        tambahan = 50000;
+        }
+        
+        
+        double totalsemuanya;
+        totalsemuanya = total + tambahan;
+        
+        
+        System.out.println("Biaya ekspedisi pengiriman paket kaamu adalah = "+ totalsemuanya);
+    }
+    
+}
